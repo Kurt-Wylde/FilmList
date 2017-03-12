@@ -76,6 +76,15 @@ class tableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.right)
+        managedContext.delete(listItems[indexPath.row])
+        listItems.remove(at: indexPath.row)
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
