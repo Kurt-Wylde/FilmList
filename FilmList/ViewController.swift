@@ -23,7 +23,7 @@ class tableViewController: UITableViewController {
     
         let alertController = UIAlertController(title: "Type Something!", message: "Type...", preferredStyle: UIAlertControllerStyle.alert)
         
-        let confirmAction = UIAlertAction(title: "Type Something!!!", style: UIAlertActionStyle.default, handler: ({
+        let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: ({
             (_) in
             if let field = alertController.textFields![0] as? UITextField {
             
@@ -49,8 +49,9 @@ class tableViewController: UITableViewController {
     func saveItem(itemToSave : String) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "ListItems", in: managedContext)
+        let entity = NSEntityDescription.entity(forEntityName: "ListEntity", in: managedContext)
         let item = NSManagedObject.init(entity: entity!, insertInto: managedContext)
+        item.setValue(itemToSave, forKey: "item")
         
         do {
             try managedContext.save()
@@ -62,6 +63,19 @@ class tableViewController: UITableViewController {
         
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ListEntity")
+        do {
+            let results = try managedContext.fetch(fetchRequest)
+            listItems = results as! [NSManagedObject]
+        }
+        catch {
+            print("Error")
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -73,6 +87,8 @@ class tableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as UITableViewCell
+        let item = listItems[indexPath.row]
+        cell.textLabel?.text = item.value(forKey: "item") as! String
         
         return cell
     }
