@@ -21,7 +21,7 @@ class tableViewController: UITableViewController {
     
     func addItem(){
     
-        let alertController = UIAlertController(title: "Type Something!", message: "Type...", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Movie Title:", message: "", preferredStyle: UIAlertControllerStyle.alert)
         
         let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: ({
             (_) in
@@ -38,7 +38,7 @@ class tableViewController: UITableViewController {
         
         alertController.addTextField(configurationHandler: ({
             (textField) in
-            textField.placeholder = "Type here something"
+            textField.placeholder = "Type here..."
         }))
         alertController.addAction(confirmAction)
         alertController.addAction(cancelAction)
@@ -97,7 +97,7 @@ class tableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as UITableViewCell
         let item = listItems[indexPath.row]
-        cell.textLabel?.text = item.value(forKey: "item") as! String
+        cell.textLabel?.text = item.value(forKey: "item") as? String
         
         return cell
     }

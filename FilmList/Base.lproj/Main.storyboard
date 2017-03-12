@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Film List-->
         <scene sceneID="RYh-1Y-2h3">
             <objects>
-                <tableViewController id="6Rh-Ta-orH" customClass="tableViewController" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Film List" id="6Rh-Ta-orH" customClass="tableViewController" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bgy-O2-y6I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="6Rh-Ta-orH" id="Xgh-Dl-tXg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ycB-1E-lvb"/>
+                    <navigationItem key="navigationItem" title="Film List" id="ycB-1E-lvb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIe-H7-ZTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
