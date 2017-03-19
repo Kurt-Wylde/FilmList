@@ -10,7 +10,6 @@
 		4576FC0A1E75D8AE0085C99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576FC091E75D8AE0085C99A /* AppDelegate.swift */; };
 		4576FC0C1E75D8AE0085C99A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576FC0B1E75D8AE0085C99A /* ViewController.swift */; };
 		4576FC0F1E75D8AE0085C99A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4576FC0D1E75D8AE0085C99A /* Main.storyboard */; };
-		4576FC121E75D8AE0085C99A /* FilmList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4576FC101E75D8AE0085C99A /* FilmList.xcdatamodeld */; };
 		4576FC141E75D8AE0085C99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4576FC131E75D8AE0085C99A /* Assets.xcassets */; };
 		4576FC171E75D8AE0085C99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4576FC151E75D8AE0085C99A /* LaunchScreen.storyboard */; };
 		45D907BB1E7F265D00A57591 /* FilmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D907BA1E7F265D00A57591 /* FilmList.swift */; };
@@ -21,7 +20,6 @@
 		4576FC091E75D8AE0085C99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4576FC0B1E75D8AE0085C99A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4576FC0E1E75D8AE0085C99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4576FC111E75D8AE0085C99A /* FilmList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FilmList.xcdatamodel; sourceTree = "<group>"; };
 		4576FC131E75D8AE0085C99A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4576FC161E75D8AE0085C99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4576FC181E75D8AE0085C99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				4576FC131E75D8AE0085C99A /* Assets.xcassets */,
 				4576FC151E75D8AE0085C99A /* LaunchScreen.storyboard */,
 				4576FC181E75D8AE0085C99A /* Info.plist */,
-				4576FC101E75D8AE0085C99A /* FilmList.xcdatamodeld */,
 			);
 			path = FilmList;
 			sourceTree = "<group>";
@@ -146,7 +143,6 @@
 				4576FC0C1E75D8AE0085C99A /* ViewController.swift in Sources */,
 				45D907BB1E7F265D00A57591 /* FilmList.swift in Sources */,
 				4576FC0A1E75D8AE0085C99A /* AppDelegate.swift in Sources */,
-				4576FC121E75D8AE0085C99A /* FilmList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,19 +311,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4576FC101E75D8AE0085C99A /* FilmList.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4576FC111E75D8AE0085C99A /* FilmList.xcdatamodel */,
-			);
-			currentVersion = 4576FC111E75D8AE0085C99A /* FilmList.xcdatamodel */;
-			path = FilmList.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 4576FBFE1E75D8AE0085C99A /* Project object */;
 }
