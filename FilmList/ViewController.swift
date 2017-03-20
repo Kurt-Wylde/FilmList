@@ -78,6 +78,7 @@ class tableViewController: UITableViewController
     {
         do
         {
+            //saving films to persistence
             try filmItems.writeToPersistence()
         }
         catch let error
@@ -86,12 +87,7 @@ class tableViewController: UITableViewController
         }
     }
     
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    //User taps "+" button
     func didTapAddItemButton(_ sender: UIBarButtonItem)
     {
         // Create an alert
@@ -125,7 +121,7 @@ class tableViewController: UITableViewController
         // The index of the new item will be the current item count
         let newIndex = filmItems.count
         
-        // Create new item and add it to the todo items list
+        // Create new item and add it to the films items list
         filmItems.append(FilmItem(title: title))
         
         // Tell the table view a new row has been created
@@ -170,6 +166,31 @@ class tableViewController: UITableViewController
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
     }
+    /* //This is all about cell actions. right swipe activated. Uncomment in case of emergency =)
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let more = UITableViewRowAction(style: .normal, title: "More") { action, index in
+            //self.isEditing = false
+            print("more button tapped")
+        }
+        more.backgroundColor = UIColor.lightGray
+        
+        let favorite = UITableViewRowAction(style: .normal, title: "Favorite") { action, index in
+            //self.isEditing = false
+            print("favorite button tapped")
+        }
+        favorite.backgroundColor = UIColor.orange
+        
+        let share = UITableViewRowAction(style: .normal, title: "Share") { action, index in
+            //self.isEditing = false
+            print("share button tapped")
+        }
+        share.backgroundColor = UIColor.blue
+        
+        return [share, favorite, more]
+    } */ //--end
+
+    
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
