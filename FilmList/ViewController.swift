@@ -57,6 +57,21 @@ class tableViewController: UITableViewController
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //setting the background image to the tableview
+        let backgroundImage = UIImage(named: "background.jpg")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
+        //hiding unusable lines in empty cells
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        // center and scale background image
+        imageView.contentMode = .scaleAspectFill
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
+    }
+    
     @objc
     public func applicationDidEnterBackground(_ notification: NSNotification)
     {
