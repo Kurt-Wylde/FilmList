@@ -17,7 +17,7 @@ class tableViewController: UITableViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.title = "Films to watch"
+        self.title = "Films"
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tableViewController.didTapAddItemButton(_:)))
         

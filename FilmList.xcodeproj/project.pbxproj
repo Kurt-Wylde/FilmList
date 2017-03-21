@@ -13,7 +13,10 @@
 		4576FC141E75D8AE0085C99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4576FC131E75D8AE0085C99A /* Assets.xcassets */; };
 		4576FC171E75D8AE0085C99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4576FC151E75D8AE0085C99A /* LaunchScreen.storyboard */; };
 		45D907BB1E7F265D00A57591 /* FilmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D907BA1E7F265D00A57591 /* FilmList.swift */; };
-		45D907BD1E80574800A57591 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45D907BC1E80574800A57591 /* background.jpg */; };
+		45D907C21E81C0BC00A57591 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D907BF1E81C0BC00A57591 /* map.png */; };
+		45D907C31E81C0BC00A57591 /* watched.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D907C01E81C0BC00A57591 /* watched.png */; };
+		45D907C41E81C0BC00A57591 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D907C11E81C0BC00A57591 /* list.png */; };
+		45D907C61E81C0D800A57591 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45D907C51E81C0D800A57591 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +28,10 @@
 		4576FC161E75D8AE0085C99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4576FC181E75D8AE0085C99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D907BA1E7F265D00A57591 /* FilmList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmList.swift; sourceTree = "<group>"; };
-		45D907BC1E80574800A57591 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../../../../Archive/background.jpg; sourceTree = "<group>"; };
+		45D907BF1E81C0BC00A57591 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		45D907C01E81C0BC00A57591 /* watched.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watched.png; sourceTree = "<group>"; };
+		45D907C11E81C0BC00A57591 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		45D907C51E81C0D800A57591 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,27 @@
 		4576FC081E75D8AE0085C99A /* FilmList */ = {
 			isa = PBXGroup;
 			children = (
+				45D907BE1E81C06400A57591 /* Icons */,
 				4576FC091E75D8AE0085C99A /* AppDelegate.swift */,
 				4576FC0B1E75D8AE0085C99A /* ViewController.swift */,
 				45D907BA1E7F265D00A57591 /* FilmList.swift */,
-				45D907BC1E80574800A57591 /* background.jpg */,
 				4576FC0D1E75D8AE0085C99A /* Main.storyboard */,
+				45D907C51E81C0D800A57591 /* background.jpg */,
 				4576FC131E75D8AE0085C99A /* Assets.xcassets */,
 				4576FC151E75D8AE0085C99A /* LaunchScreen.storyboard */,
 				4576FC181E75D8AE0085C99A /* Info.plist */,
 			);
 			path = FilmList;
+			sourceTree = "<group>";
+		};
+		45D907BE1E81C06400A57591 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				45D907BF1E81C0BC00A57591 /* map.png */,
+				45D907C01E81C0BC00A57591 /* watched.png */,
+				45D907C11E81C0BC00A57591 /* list.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,10 +147,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45D907C41E81C0BC00A57591 /* list.png in Resources */,
 				4576FC171E75D8AE0085C99A /* LaunchScreen.storyboard in Resources */,
-				45D907BD1E80574800A57591 /* background.jpg in Resources */,
+				45D907C61E81C0D800A57591 /* background.jpg in Resources */,
+				45D907C31E81C0BC00A57591 /* watched.png in Resources */,
 				4576FC141E75D8AE0085C99A /* Assets.xcassets in Resources */,
 				4576FC0F1E75D8AE0085C99A /* Main.storyboard in Resources */,
+				45D907C21E81C0BC00A57591 /* map.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
