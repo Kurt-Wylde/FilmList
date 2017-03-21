@@ -71,6 +71,8 @@ class tableViewController: UITableViewController
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //Cell transparency
         cell.backgroundColor = .clear
+        //Cell text color
+        cell.textLabel?.textColor = .red
     }
     
     @objc
