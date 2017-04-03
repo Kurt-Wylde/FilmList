@@ -18,8 +18,11 @@ class tableViewController: UITableViewController
         // Do any additional setup after loading the view, typically from a nib.
         
         self.title = "Films"
+        //self.navigationController?.navigationBar.tintColor = UIColor.white
+        //self.navigationController?.navigationBar.titleTextAttributes? = [NSForegroundColorAttributeName: UIColor.white]
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tableViewController.didTapAddItemButton(_:)))
+        self.navigationItem.rightBarButtonItem?.tintColor = .white
         
         // Setup a notification to let us know when the app is about to close,
         // and that we should store the user items to persistence. This will call the

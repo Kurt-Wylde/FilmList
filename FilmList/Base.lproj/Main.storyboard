@@ -198,11 +198,12 @@
         <!--Films-->
         <scene sceneID="Idu-Z2-h32">
             <objects>
-                <navigationController id="ZOm-K2-VUN" sceneMemberID="viewController">
+                <navigationController id="ZOm-K2-VUN" customClass="NavigationControllerFilms" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Films" image="list.png" id="jrG-Ym-7CW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Es2-Jw-3vk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="6Rh-Ta-orH" kind="relationship" relationship="rootViewController" id="d9u-or-qc2"/>
