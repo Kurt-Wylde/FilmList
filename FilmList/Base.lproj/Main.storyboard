@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="228" y="263"/>
         </scene>
-        <!--View Controller-->
+        <!--Top250-->
         <scene sceneID="Nbk-7A-4Ls">
             <objects>
                 <viewController id="9e3-a4-vmw" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Clc-F7-4Pm"/>
+                    <tabBarItem key="tabBarItem" title="Top250" image="star.png" id="Clc-F7-4Pm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5X-Db-JqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,6 +254,7 @@
         <image name="list.png" width="32" height="22"/>
         <image name="map.png" width="32" height="26"/>
         <image name="nav_arrow" width="30" height="30"/>
+        <image name="star.png" width="32" height="32"/>
         <image name="watched.png" width="32" height="24"/>
     </resources>
 </document>
