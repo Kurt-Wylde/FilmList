@@ -428,7 +428,7 @@
                                     <constraint firstAttribute="height" constant="21" id="Dbl-9R-N9L"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhk-D6-ZLS">
@@ -437,11 +437,11 @@
                                     <constraint firstAttribute="height" constant="21" id="mUM-IA-mEc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bYd-Je-pDo" firstAttribute="top" secondItem="3LN-ce-lEs" secondAttribute="bottom" constant="56" id="1df-Jc-hWF"/>
                             <constraint firstItem="RAk-rD-RqO" firstAttribute="centerX" secondItem="uE9-3d-TET" secondAttribute="centerX" id="Bc7-vG-KZQ"/>

@@ -11,6 +11,7 @@ import UIKit
 class tableViewController: UITableViewController
 {
     private var filmItems = [FilmItem]()
+    private var WatchedItems = [WatchedItem]()
     
     override func viewDidLoad()
     {
@@ -167,6 +168,7 @@ class tableViewController: UITableViewController
         {
             let item = filmItems[indexPath.row]
             item.done = !item.done
+            WatchedItems.append(WatchedItem(title: item.title))
             
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }

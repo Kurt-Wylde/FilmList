@@ -32,6 +32,7 @@
 		45A883101EB9163E0014F29C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A8830F1EB9163E0014F29C /* TableViewCell.swift */; };
 		45A883121EB916640014F29C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A883111EB916640014F29C /* DetailViewController.swift */; };
 		45A883141EB92C6E0014F29C /* Watched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A883131EB92C6E0014F29C /* Watched.swift */; };
+		45A883161EB93EAE0014F29C /* WatchedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A883151EB93EAE0014F29C /* WatchedItem.swift */; };
 		45D907BB1E7F265D00A57591 /* FilmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D907BA1E7F265D00A57591 /* FilmItem.swift */; };
 		45D907C21E81C0BC00A57591 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D907BF1E81C0BC00A57591 /* map.png */; };
 		45D907C31E81C0BC00A57591 /* watched.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D907C01E81C0BC00A57591 /* watched.png */; };
@@ -66,6 +67,7 @@
 		45A8830F1EB9163E0014F29C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		45A883111EB916640014F29C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		45A883131EB92C6E0014F29C /* Watched.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Watched.swift; sourceTree = "<group>"; };
+		45A883151EB93EAE0014F29C /* WatchedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchedItem.swift; sourceTree = "<group>"; };
 		45D907BA1E7F265D00A57591 /* FilmItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmItem.swift; sourceTree = "<group>"; };
 		45D907BF1E81C0BC00A57591 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		45D907C01E81C0BC00A57591 /* watched.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watched.png; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				4576FC0B1E75D8AE0085C99A /* tableViewController.swift */,
 				45A883131EB92C6E0014F29C /* Watched.swift */,
 				45D907BA1E7F265D00A57591 /* FilmItem.swift */,
+				45A883151EB93EAE0014F29C /* WatchedItem.swift */,
 				4576FC0D1E75D8AE0085C99A /* Main.storyboard */,
 				45A8830D1EA3A3330014F29C /* TopList.swift */,
 				45A8830F1EB9163E0014F29C /* TableViewCell.swift */,
@@ -255,6 +258,7 @@
 				45A8830E1EA3A3330014F29C /* TopList.swift in Sources */,
 				45A883101EB9163E0014F29C /* TableViewCell.swift in Sources */,
 				45A883141EB92C6E0014F29C /* Watched.swift in Sources */,
+				45A883161EB93EAE0014F29C /* WatchedItem.swift in Sources */,
 				45D907BB1E7F265D00A57591 /* FilmItem.swift in Sources */,
 				45A882EA1E9182CB0014F29C /* CustomAnnotation.swift in Sources */,
 				4576FC0A1E75D8AE0085C99A /* AppDelegate.swift in Sources */,
