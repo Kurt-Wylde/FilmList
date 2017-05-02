@@ -29,66 +29,52 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
             self.title = "Top movies"
             self.navigationController?.navigationBar.titleTextAttributes? = [NSForegroundColorAttributeName: UIColor.white]
             
-            self.downloadJsonWithURL()
+            self.downloadJsonWithTask()
             
-            // Do any additional setup after loading the view, typically from a nib.
+            
         }
+    
         
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
-        }
+            func downloadJsonWithTask() {
         
+                let url = NSURL(string: urlString)
         
-        func downloadJsonWithURL() {
-            let url = NSURL(string: urlString)
-            URLSession.shared.dataTask(with: (url as? URL)!, completionHandler: {(data, response, error) -> Void in
-                
-                if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                    print(jsonObj!.value(forKey: "movies")!)
-                    
-                    if let actorArray = jsonObj!.value(forKey: "movies") as? NSArray {
-                        for actor in actorArray{
-                            if let actorDict = actor as? NSDictionary {
-                                if let name = actorDict.value(forKey: "title") {
-                                    self.titleArray.append(name as! String)
+                var downloadTask = URLRequest(url: (url as? URL)!, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 60)
+        
+                downloadTask.httpMethod = "GET"
+        
+                URLSession.shared.dataTask(with: downloadTask, completionHandler: {(data, response, error) -> Void in
+        
+                    if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                        print(jsonData!.value(forKey: "movies")!)
+                        
+                        if let actorArray = jsonData!.value(forKey: "movies") as? NSArray {
+                            for actor in actorArray{
+                                if let actorDict = actor as? NSDictionary {
+                                    if let name = actorDict.value(forKey: "title") {
+                                        self.titleArray.append(name as! String)
+                                    }
+                                    if let name = actorDict.value(forKey: "year") {
+                                        self.yearArray.append(name as! String)
+                                    }
+                                    if let name = actorDict.value(forKey: "urlPoster") {
+                                        self.imgURLArray.append(name as! String)
+                                    }
+                                    
                                 }
-                                if let name = actorDict.value(forKey: "year") {
-                                    self.yearArray.append(name as! String)
-                                }
-                                if let name = actorDict.value(forKey: "urlPoster") {
-                                    self.imgURLArray.append(name as! String)
-                                }
-                                
                             }
                         }
+                        
+                        OperationQueue.main.addOperation({
+                            self.tableView.reloadData()
+                        })
                     }
+        
                     
-                    OperationQueue.main.addOperation({
-                        self.tableView.reloadData()
-                    })
-                }
-            }).resume()
-        }
         
-        
-        //    func downloadJsonWithTask() {
-        //
-        //        let url = NSURL(string: urlString)
-        //
-        //        var downloadTask = URLRequest(url: (url as? URL)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 20)
-        //
-        //        downloadTask.httpMethod = "GET"
-        //
-        //        URLSession.shared.dataTask(with: downloadTask, completionHandler: {(data, response, error) -> Void in
-        //
-        //            let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-        //
-        //            print(jsonData!)
-        //
-        //        }).resume()
-        //    }
-        
+                }).resume()
+            }
+    
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return titleArray.count
         }
