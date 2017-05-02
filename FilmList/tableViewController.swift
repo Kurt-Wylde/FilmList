@@ -11,7 +11,7 @@ import UIKit
 class tableViewController: UITableViewController
 {
     private var filmItems = [FilmItem]()
-    private var WatchedItems = [WatchedItem]()
+    var WatchedItems = [WatchedItem]()
     
     override func viewDidLoad()
     {
@@ -206,5 +206,13 @@ class tableViewController: UITableViewController
             filmItems.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .top)
         }
+    }
+    
+    
+    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let DestViewController : Watched = segue.destination as! Watched
+        DestViewController.WatchedItems = WatchedItems
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class Watched: UITableViewController {
     
-    private var WatchedItems = [WatchedItem]()
+    var WatchedItems = [WatchedItem]()
     
     override func viewDidLoad()
     {

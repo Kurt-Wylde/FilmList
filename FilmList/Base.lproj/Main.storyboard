@@ -14,7 +14,7 @@
         <scene sceneID="eeV-iI-Fk5">
             <objects>
                 <navigationController id="uSU-8M-dcg" customClass="NavigationControllerFilms" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Top" selectedImage="star.png" id="FB9-gk-NAj"/>
+                    <tabBarItem key="tabBarItem" title="Top" image="star.png" id="FB9-gk-NAj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pgj-Rp-U0w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
