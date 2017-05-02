@@ -247,7 +247,7 @@
             </objects>
             <point key="canvasLocation" x="1002" y="-440"/>
         </scene>
-        <!--Top 10 films-->
+        <!--Top 10 movies-->
         <scene sceneID="AY4-3V-0Sj">
             <objects>
                 <viewController id="ejL-UF-daj" customClass="TopList" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
@@ -354,7 +354,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Top" image="star.png" id="S5o-aA-7l9"/>
-                    <navigationItem key="navigationItem" title="Top 10 films" id="48N-rf-q4Y"/>
+                    <navigationItem key="navigationItem" title="Top 10 movies" id="48N-rf-q4Y"/>
                     <connections>
                         <outlet property="tableView" destination="mhL-c7-MNf" id="TeU-PB-Cuy"/>
                     </connections>

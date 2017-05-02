@@ -10,8 +10,9 @@ import UIKit
 import Foundation
     
 class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
-        
-        final let urlString = "https://api.myjson.com/bins/82g4l"
+    
+        //This is a url to JSON (a bit modified json from the myapifilms.com. It's static. The live top250 json from myapifilms.com is hard to deploy in the app)
+        final let urlString = "https://api.myjson.com/bins/pvitx"
         //Old url "http://api.myapifilms.com/imdb/top?start=1&end=10&token=67fc7a85-30c9-4031-a604-f126d958e077&format=json&data=0"
         
         @IBOutlet weak var tableView: UITableView!
