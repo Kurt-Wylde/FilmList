@@ -48,7 +48,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         {
             let coordinate:[Double] = coordinates[i] as! [Double]
             let point = CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: coordinate[0], longitude: coordinate[1]))
-            point.image = UIImage(named: "Image-\(i+1).jpg")
+            point.image = UIImage(named: "image-\(i+1).jpg")
             point.name = names[i]
             point.address = addresses[i]
             point.phone = phones[i]
