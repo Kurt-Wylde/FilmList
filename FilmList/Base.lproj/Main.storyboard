@@ -10,25 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Watched-->
-        <scene sceneID="Y7K-Nb-MJG">
-            <objects>
-                <viewController id="g2F-Xz-oeU" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7Pd-YZ-hcE"/>
-                        <viewControllerLayoutGuide type="bottom" id="abO-Hf-xwP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aQp-Iv-j6H">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Watched" image="watched.png" selectedImage="watched.png" id="kJu-4h-qe3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="82b-22-JM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="228" y="263"/>
-        </scene>
         <!--Top-->
         <scene sceneID="eeV-iI-Fk5">
             <objects>
@@ -185,9 +166,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="ZOm-K2-VUN" kind="relationship" relationship="viewControllers" id="LVC-gV-JYI"/>
-                        <segue destination="g2F-Xz-oeU" kind="relationship" relationship="viewControllers" id="kG6-cr-tpS"/>
                         <segue destination="pzI-y0-4fd" kind="relationship" relationship="viewControllers" id="Ylc-HV-igV"/>
                         <segue destination="uSU-8M-dcg" kind="relationship" relationship="viewControllers" id="Gv1-4G-L4n"/>
+                        <segue destination="Egj-ut-9TF" kind="relationship" relationship="viewControllers" id="Hwo-CG-jZ7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYT-JX-5Br" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,6 +228,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIe-H7-ZTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002" y="-440"/>
+        </scene>
+        <!--Watched movies-->
+        <scene sceneID="Uhb-gy-GFP">
+            <objects>
+                <tableViewController id="pdh-dO-Ssl" customClass="Watched" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cBz-Mv-hB1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="8bC-Af-CZJ">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8bC-Af-CZJ" id="OW5-km-LBW">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9555833936" green="0.156665951" blue="0.37461462620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pdh-dO-Ssl" id="2K5-Rs-3M1"/>
+                            <outlet property="delegate" destination="pdh-dO-Ssl" id="oL0-dv-2uH"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Watched" image="watched.png" id="thZ-wz-IMU"/>
+                    <navigationItem key="navigationItem" title="Watched movies" id="Em7-Tz-qob"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEg-iX-25y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="251"/>
+        </scene>
+        <!--Watched-->
+        <scene sceneID="Fj0-j0-Wnl">
+            <objects>
+                <navigationController id="Egj-ut-9TF" customClass="NavigationControllerFilms" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Watched" image="watched.png" id="B8i-rB-Cjp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGR-l2-2LE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pdh-dO-Ssl" kind="relationship" relationship="rootViewController" id="qtO-6u-VdN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1h-q9-h0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="251"/>
         </scene>
         <!--Top movies-->
         <scene sceneID="AY4-3V-0Sj">
