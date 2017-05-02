@@ -25,6 +25,10 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
         override func viewDidLoad() {
             super.viewDidLoad()
             
+            
+            self.title = "Top movies"
+            self.navigationController?.navigationBar.titleTextAttributes? = [NSForegroundColorAttributeName: UIColor.white]
+            
             self.downloadJsonWithURL()
             
             // Do any additional setup after loading the view, typically from a nib.

@@ -32,11 +32,12 @@
         <!--Top-->
         <scene sceneID="eeV-iI-Fk5">
             <objects>
-                <navigationController id="uSU-8M-dcg" sceneMemberID="viewController">
+                <navigationController id="uSU-8M-dcg" customClass="NavigationControllerFilms" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Top" selectedImage="star.png" id="FB9-gk-NAj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pgj-Rp-U0w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="ejL-UF-daj" kind="relationship" relationship="rootViewController" id="NUG-En-wSa"/>
@@ -215,7 +216,7 @@
         <scene sceneID="RYh-1Y-2h3">
             <objects>
                 <tableViewController title="Film List" id="6Rh-Ta-orH" customClass="tableViewController" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bgy-O2-y6I">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bgy-O2-y6I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.32372303299492389" green="0.32372303299492389" blue="0.32372303299492389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -247,7 +248,7 @@
             </objects>
             <point key="canvasLocation" x="1002" y="-440"/>
         </scene>
-        <!--Top 10 movies-->
+        <!--Top movies-->
         <scene sceneID="AY4-3V-0Sj">
             <objects>
                 <viewController id="ejL-UF-daj" customClass="TopList" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
@@ -259,9 +260,12 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="155" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mhL-c7-MNf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="155" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mhL-c7-MNf">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="155" id="Fho-rX-WbQ" customClass="TableViewCell" customModule="FilmList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="155"/>
@@ -283,7 +287,7 @@
                                                         <constraint firstAttribute="width" constant="50" id="Saf-1o-JD8"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyG-tf-ne2">
@@ -293,7 +297,7 @@
                                                         <constraint firstAttribute="width" constant="41" id="fJf-8J-1QF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Q8a-oj-aXd" userLabel="Title Label">
@@ -302,7 +306,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="MWH-p8-leE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="uHT-ZI-GNb" userLabel="Year Label">
@@ -311,7 +315,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="mGV-0Q-sA0"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -331,6 +335,8 @@
                                                 <constraint firstItem="fyG-tf-ne2" firstAttribute="centerY" secondItem="pDG-SL-lWu" secondAttribute="centerY" id="tZr-LU-7fQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="imgView" destination="Phv-wP-h6q" id="nZo-nU-mMx"/>
                                             <outlet property="titleLabel" destination="Q8a-oj-aXd" id="4rf-CC-2LU"/>
@@ -354,7 +360,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Top" image="star.png" id="S5o-aA-7l9"/>
-                    <navigationItem key="navigationItem" title="Top 10 movies" id="48N-rf-q4Y"/>
+                    <navigationItem key="navigationItem" title="Top movies" id="48N-rf-q4Y"/>
                     <connections>
                         <outlet property="tableView" destination="mhL-c7-MNf" id="TeU-PB-Cuy"/>
                     </connections>
