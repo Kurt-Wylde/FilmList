@@ -178,8 +178,9 @@
         <!--Films-->
         <scene sceneID="Idu-Z2-h32">
             <objects>
-                <navigationController id="ZOm-K2-VUN" customClass="NavigationControllerFilms" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="ZOm-K2-VUN" customClass="NavigationControllerFilms" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Films" image="list.png" id="jrG-Ym-7CW"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Es2-Jw-3vk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -197,25 +198,10 @@
         <scene sceneID="RYh-1Y-2h3">
             <objects>
                 <tableViewController title="Film List" id="6Rh-Ta-orH" customClass="tableViewController" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bgy-O2-y6I">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bgy-O2-y6I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.32372303299492389" green="0.32372303299492389" blue="0.32372303299492389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.3596526015" green="0.3596526015" blue="0.3596526015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" red="0.21734216370000001" green="0.21734216370000001" blue="0.21734216370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexTrackingBackgroundColor" red="0.3596526015" green="0.3596526015" blue="0.3596526015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="eHy-hk-bvl">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eHy-hk-bvl" id="IDa-IM-J7J">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.9555833936" green="0.156665951" blue="0.37461462620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="6Rh-Ta-orH" id="Oa0-R6-z4D"/>
@@ -224,6 +210,10 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="List" selectedImage="list.png" id="5My-75-pW9"/>
                     <navigationItem key="navigationItem" title="Film List" id="ycB-1E-lvb"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Bgy-O2-y6I" id="dHh-am-JYv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIe-H7-ZTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -305,7 +295,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fho-rX-WbQ" id="pDG-SL-lWu">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Phv-wP-h6q">
