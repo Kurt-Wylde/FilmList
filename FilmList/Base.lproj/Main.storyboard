@@ -178,9 +178,9 @@
         <!--Films-->
         <scene sceneID="Idu-Z2-h32">
             <objects>
-                <navigationController navigationBarHidden="YES" id="ZOm-K2-VUN" customClass="NavigationControllerFilms" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="ZOm-K2-VUN" customClass="NavigationControllerFilms" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Films" image="list.png" id="jrG-Ym-7CW"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Es2-Jw-3vk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -198,8 +198,8 @@
         <scene sceneID="RYh-1Y-2h3">
             <objects>
                 <tableViewController title="Film List" id="6Rh-Ta-orH" customClass="tableViewController" customModule="FilmList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bgy-O2-y6I">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bgy-O2-y6I">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections/>
@@ -208,9 +208,9 @@
                             <outlet property="delegate" destination="6Rh-Ta-orH" id="Xgh-Dl-tXg"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="List" selectedImage="list.png" id="5My-75-pW9"/>
                     <navigationItem key="navigationItem" title="Film List" id="ycB-1E-lvb"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Bgy-O2-y6I" id="dHh-am-JYv"/>
                     </connections>
