@@ -12,7 +12,8 @@ import Foundation
 class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
         //This is a url to JSON (a bit modified json from the myapifilms.com. It's static. The live top250 json from myapifilms.com is hard to deploy in the app)
-        final let urlString = "https://api.myjson.com/bins/pvitx"
+        final let urlString = "https://api.myjson.com/bins/128p7x"
+        //"https://api.myjson.com/bins/pvitx"
         //Old url "http://api.myapifilms.com/imdb/top?start=1&end=10&token=67fc7a85-30c9-4031-a604-f126d958e077&format=json&data=0"
         
         @IBOutlet weak var tableView: UITableView!
@@ -20,6 +21,19 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
         var titleArray = [String]()
         var yearArray = [String]()
         var imgURLArray = [String]()
+    
+        var ReleaseArray = [String]()
+        var DirectorsArray = [String]()
+        var WritersArray = [String]()
+        var CountriesArray = [String]()
+        var LanguagesArray = [String]()
+        var GenresArray = [String]()
+        var PlotArray = [String]()
+        var urlIMDBArray = [String]()
+        var RatingArray = [String]()
+        var RatedArray = [String]()
+        var VotesArray = [String]()
+        var TypeArray = [String]()
         
         
         override func viewDidLoad() {
@@ -48,17 +62,53 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
                     if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                         print(jsonData!.value(forKey: "movies")!)
                         
-                        if let actorArray = jsonData!.value(forKey: "movies") as? NSArray {
-                            for actor in actorArray{
-                                if let actorDict = actor as? NSDictionary {
-                                    if let name = actorDict.value(forKey: "title") {
+                        if let FilmsArray = jsonData!.value(forKey: "movies") as? NSArray {
+                            for actor in FilmsArray{
+                                if let FilmsDict = actor as? NSDictionary {
+                                    if let name = FilmsDict.value(forKey: "title") {
                                         self.titleArray.append(name as! String)
                                     }
-                                    if let name = actorDict.value(forKey: "year") {
+                                    if let name = FilmsDict.value(forKey: "year") {
                                         self.yearArray.append(name as! String)
                                     }
-                                    if let name = actorDict.value(forKey: "urlPoster") {
+                                    if let name = FilmsDict.value(forKey: "urlPoster") {
                                         self.imgURLArray.append(name as! String)
+                                    }
+                                    if let name = FilmsDict.value(forKey: "releaseDate") {
+                                        self.ReleaseArray.append(name as! String)
+                                    }
+//                                    if let name = FilmsDict.value(forKey: "directors") {
+//                                        self.DirectorsArray.append(name as! String)
+//                                    }
+//                                    if let name = FilmsDict.value(forKey: "writers") {
+//                                        self.WritersArray.append(name as! String)
+//                                    }
+//                                    if let name = FilmsDict.value(forKey: "countries") {
+//                                        self.CountriesArray.append(name as! String)
+//                                    }
+//                                    if let name = FilmsDict.value(forKey: "languages") {
+//                                        self.LanguagesArray.append(name as! String)
+//                                    }
+//                                    if let name = FilmsDict.value(forKey: "genres") {
+//                                        self.GenresArray.append(name as! String)
+//                                    }
+                                    if let name = FilmsDict.value(forKey: "plot") {
+                                        self.PlotArray.append(name as! String)
+                                    }
+                                    if let name = FilmsDict.value(forKey: "urlIMDB") {
+                                        self.urlIMDBArray.append(name as! String)
+                                    }
+                                    if let name = FilmsDict.value(forKey: "rating") {
+                                        self.RatingArray.append(name as! String)
+                                    }
+                                    if let name = FilmsDict.value(forKey: "rated") {
+                                        self.RatedArray.append(name as! String)
+                                    }
+                                    if let name = FilmsDict.value(forKey: "votes") {
+                                        self.VotesArray.append(name as! String)
+                                    }
+                                    if let name = FilmsDict.value(forKey: "type") {
+                                        self.TypeArray.append(name as! String)
                                     }
                                     
                                 }
