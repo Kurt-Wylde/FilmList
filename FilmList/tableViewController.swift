@@ -21,6 +21,41 @@ class tableViewController: UIViewController, UITableViewDataSource, UITableViewD
         pinchRecognizer.addTarget(self, action: #selector(tableViewController.handlePinch(recognizer:)))
         tableView.addGestureRecognizer(pinchRecognizer)
         
+                // Setup a notification to let us know when the app is about to close,
+                // and that we should store the user items to persistence. This will call the
+                // applicationDidEnterBackground() function in this class
+                NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(UIApplicationDelegate.applicationDidEnterBackground(_:)),
+                    name: NSNotification.Name.UIApplicationDidEnterBackground,
+                    object: nil)
+        
+                do
+                {
+                    // Try to load from persistence
+                    self.filmItems = try [FilmItem].readFromPersistence()
+                }
+                catch let error as NSError
+                {
+                    if error.domain == NSCocoaErrorDomain && error.code == NSFileReadNoSuchFileError
+                    {
+                        NSLog("No persistence file found, not necesserially an error...")
+                    }
+                    else
+                    {
+                        let alert = UIAlertController(
+                            title: "Error",
+                            message: "Could not load the list items!",
+                            preferredStyle: .alert)
+        
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        
+                        self.present(alert, animated: true, completion: nil)
+                        
+                        NSLog("Error loading from persistence: \(error)")
+                    }
+                }
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(FilmViewCell.self, forCellReuseIdentifier: "cell")
@@ -44,6 +79,21 @@ class tableViewController: UIViewController, UITableViewDataSource, UITableViewD
         filmItems.append(FilmItem(text: "catch up with Mom"))
         filmItems.append(FilmItem(text: "get a hair cut"))
     }
+    
+        @objc
+        public func applicationDidEnterBackground(_ notification: NSNotification)
+        {
+            do
+            {
+                //saving films to persistence
+                try filmItems.writeToPersistence()
+            }
+            catch let error
+            {
+                NSLog("Error writing to persistence: \(error)")
+            }
+        }
+
     
     // MARK: - Table view data source
     
