@@ -14,11 +14,26 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var releaseDateLabel: UILabel!
+    @IBOutlet weak var plotView: UITextView!
+    @IBOutlet weak var urlIMDBLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var ratedLabel: UILabel!
+    @IBOutlet weak var votesLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    
     
     //data from previous controller
     var titleString:String!
     var yearString:String!
     var imageString:String!
+    var releaseDateString:String!
+    var plotString:String!
+    var urlIMDBString:String!
+    var ratingString:String!
+    var ratedString:String!
+    var votesString:String!
+    var typeString:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +48,7 @@ class DetailViewController: UIViewController {
     func updateUI() {
         self.titleLabel.text = titleString
         self.yearLabel.text = yearString
+        self.plotView.text = plotString
         
         let imgURL = URL(string:imageString)
         
