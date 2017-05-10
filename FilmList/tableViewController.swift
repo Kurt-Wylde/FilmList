@@ -21,40 +21,40 @@ class tableViewController: UIViewController, UITableViewDataSource, UITableViewD
         pinchRecognizer.addTarget(self, action: #selector(tableViewController.handlePinch(recognizer:)))
         tableView.addGestureRecognizer(pinchRecognizer)
         
-                // Setup a notification to let us know when the app is about to close,
-                // and that we should store the user items to persistence. This will call the
-                // applicationDidEnterBackground() function in this class
-                NotificationCenter.default.addObserver(
-                    self,
-                    selector: #selector(UIApplicationDelegate.applicationDidEnterBackground(_:)),
-                    name: NSNotification.Name.UIApplicationDidEnterBackground,
-                    object: nil)
+        // Setup a notification to let us know when the app is about to close,
+        // and that we should store the user items to persistence. This will call the
+        // applicationDidEnterBackground() function in this class
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(UIApplicationDelegate.applicationDidEnterBackground(_:)),
+            name: NSNotification.Name.UIApplicationDidEnterBackground,
+            object: nil)
         
-                do
-                {
+            do
+            {
                     // Try to load from persistence
                     self.filmItems = try [FilmItem].readFromPersistence()
-                }
-                catch let error as NSError
+            }
+            catch let error as NSError
+            {
+                if error.domain == NSCocoaErrorDomain && error.code == NSFileReadNoSuchFileError
                 {
-                    if error.domain == NSCocoaErrorDomain && error.code == NSFileReadNoSuchFileError
-                    {
-                        NSLog("No persistence file found, not necesserially an error...")
-                    }
-                    else
-                    {
-                        let alert = UIAlertController(
-                            title: "Error",
-                            message: "Could not load the list items!",
-                            preferredStyle: .alert)
-        
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                        
-                        self.present(alert, animated: true, completion: nil)
-                        
-                        NSLog("Error loading from persistence: \(error)")
-                    }
+                    NSLog("No persistence file found, not necesserially an error...")
                 }
+                else
+                {
+                    let alert = UIAlertController(
+                        title: "Error",
+                        message: "Could not load the list items!",
+                        preferredStyle: .alert)
+        
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        
+                    self.present(alert, animated: true, completion: nil)
+                        
+                    NSLog("Error loading from persistence: \(error)")
+                }
+            }
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -66,18 +66,12 @@ class tableViewController: UIViewController, UITableViewDataSource, UITableViewD
         if filmItems.count > 0 {
             return
         }
-        filmItems.append(FilmItem(text: "feed the cat"))
-        filmItems.append(FilmItem(text: "buy eggs"))
-        filmItems.append(FilmItem(text: "watch WWDC videos"))
-        filmItems.append(FilmItem(text: "rule the Web"))
-        filmItems.append(FilmItem(text: "buy a new iPhone"))
-        filmItems.append(FilmItem(text: "darn holes in socks"))
-        filmItems.append(FilmItem(text: "write this tutorial"))
-        filmItems.append(FilmItem(text: "master Swift"))
-        filmItems.append(FilmItem(text: "learn to draw"))
-        filmItems.append(FilmItem(text: "get more exercise"))
-        filmItems.append(FilmItem(text: "catch up with Mom"))
-        filmItems.append(FilmItem(text: "get a hair cut"))
+        filmItems.append(FilmItem(text: "The Godfather"))
+        filmItems.append(FilmItem(text: "The Dark Knight"))
+        filmItems.append(FilmItem(text: "The Crow"))
+        filmItems.append(FilmItem(text: "The Shawshank Redemption"))
+        filmItems.append(FilmItem(text: "The Lord of the Rings: The Return of the King"))
+        filmItems.append(FilmItem(text: "Fight Club"))
     }
     
         @objc
