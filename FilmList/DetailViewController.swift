@@ -16,11 +16,18 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var plotView: UITextView!
-    @IBOutlet weak var urlIMDBLabel: UILabel!
+    @IBOutlet weak var urlIMDBLabel: UIButton!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var ratedLabel: UILabel!
     @IBOutlet weak var votesLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
+    
+    
+
+    @IBAction func urlIMDBButtonPressed(sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: urlIMDBString)! as URL)
+
+    }
     
     
     //data from previous controller
@@ -49,10 +56,24 @@ class DetailViewController: UIViewController {
         self.titleLabel.text = titleString
         self.yearLabel.text = yearString
         self.plotView.text = plotString
+        self.releaseDateLabel.text = "Released: \(releaseDateString!)"
+        self.urlIMDBLabel.setTitle("IMDB Link", for: UIControlState.normal)
+        self.ratingLabel.text = "Rating: \(ratingString!)"
+        self.ratedLabel.text = "Rated: \(ratedString!)"
+        self.votesLabel.text = "Votes: \(votesString!)"
+        self.typeLabel.text = "Type: \(typeString!)"
+        
         
         let imgURL = URL(string:imageString)
         
         let data = NSData(contentsOf: (imgURL)!)
         self.imageView.image = UIImage(data: data as! Data)
+    }
+    
+    func urlIMDBButtonPressed() {
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        plotView.scrollRangeToVisible(NSMakeRange(0,0))
     }
 }

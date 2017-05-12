@@ -151,6 +151,13 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
             vc.imageString = imgURLArray[indexPath.row]
             vc.titleString = titleArray[indexPath.row]
             vc.yearString = yearArray[indexPath.row]
+            vc.plotString = PlotArray[indexPath.row]
+            vc.releaseDateString = ReleaseArray[indexPath.row]
+            vc.ratingString = RatingArray[indexPath.row]
+            vc.ratedString = RatedArray[indexPath.row]
+            vc.votesString = VotesArray[indexPath.row]
+            vc.urlIMDBString = urlIMDBArray[indexPath.row]
+            vc.typeString = TypeArray[indexPath.row]
             
             self.navigationController?.pushViewController(vc, animated: true)
         }
