@@ -472,7 +472,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6p-CQ-ItI">
-                                <rect key="frame" x="142" y="308" width="37" height="30"/>
+                                <rect key="frame" x="141.5" y="308" width="37" height="30"/>
                                 <state key="normal" title="IMDB"/>
                                 <connections>
                                     <action selector="urlIMDBButtonPressedWithSender:" destination="Vre-aB-eiL" eventType="touchUpInside" id="LRd-NQ-U2h"/>
