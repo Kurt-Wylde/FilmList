@@ -61,11 +61,12 @@ class DetailViewController: UIViewController {
     
     
     func updateUI() {
-        
 
         self.titleLabel.text = titleString
         self.yearLabel.text = yearString
         self.plotView.text = plotString
+        releaseDateString.insert(".", at: releaseDateString.index(releaseDateString.startIndex, offsetBy: +4))
+        releaseDateString.insert(".", at: releaseDateString.index(releaseDateString.startIndex, offsetBy: +7))
         self.releaseDateLabel.text = "Released: \(releaseDateString!)"
         self.urlIMDBLabel.setTitle("IMDB Link", for: UIControlState.normal)
         self.ratingLabel.text = "Rating: \(ratingString!)"
