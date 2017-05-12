@@ -30,6 +30,8 @@ class DetailViewController: UIViewController {
     }
     
     
+    
+    
     //data from previous controller
     var titleString:String!
     var yearString:String!
@@ -44,6 +46,10 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+        
+
         self.updateUI()
     }
     
@@ -52,7 +58,11 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     func updateUI() {
+        
+
         self.titleLabel.text = titleString
         self.yearLabel.text = yearString
         self.plotView.text = plotString
@@ -68,6 +78,8 @@ class DetailViewController: UIViewController {
         
         let data = NSData(contentsOf: (imgURL)!)
         self.imageView.image = UIImage(data: data as! Data)
+        
+
     }
     
     func urlIMDBButtonPressed() {
