@@ -1,9 +1,9 @@
 //
-//  TableViewCell.swift
-//  ClearStyle
+//  FilmViewCell.swift
+//  FilmList
 //
-//  Created by Audrey M Tam on 29/07/2014.
-//  Copyright (c) 2014 Ray Wenderlich. All rights reserved.
+//  Created by Kurt on 12.05.17.
+//  Copyright © 2017 Evgeny Koshkin. All rights reserved.
 //
 
 import UIKit

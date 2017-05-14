@@ -1,5 +1,5 @@
 //
-//  FilmList.swift
+//  FilmItem.swift
 //  FilmList
 //
 //  Created by Kurt on 19.03.17.

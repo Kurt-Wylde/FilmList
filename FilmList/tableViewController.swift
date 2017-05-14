@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  tableViewController.swift
 //  FilmList
 //
 //  Created by Kurt on 12.03.17.
