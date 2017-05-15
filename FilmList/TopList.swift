@@ -26,7 +26,7 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
         var RatedArray = [String]()
         var VotesArray = [String]()
         var TypeArray = [String]()
-        
+    
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -159,6 +159,7 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
             vc.typeString = TypeArray[indexPath.row]
             
             self.navigationController?.pushViewController(vc, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 
