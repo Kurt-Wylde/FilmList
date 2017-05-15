@@ -24,7 +24,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var regionRadius: CLLocationDistance = 5000
     
     
-    
+    // Asking permission for location
+    override func viewDidAppear(_ animated: Bool) {
+        locationAuthStatus()
+    }
+    func locationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            Map.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,17 +68,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
     
-    // Asking permission for location
-    override func viewDidAppear(_ animated: Bool) {
-        locationAuthStatus()
-    }
-    func locationAuthStatus() {
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            Map.showsUserLocation = true
-        } else {
-            locationManager.requestWhenInUseAuthorization()
-        }
-    }
     
     
     // map type button
@@ -133,7 +133,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         calloutView.CalloutName.text = CalloutAnnotation.name
         calloutView.CalloutAddress.text = CalloutAnnotation.address
         calloutView.CalloutPhone.text = CalloutAnnotation.phone
-        calloutView.CalloutPhone.isUserInteractionEnabled = true
         calloutView.CalloutImage.image = CalloutAnnotation.image
         // 3
         calloutView.center = CGPoint(x: view.bounds.size.width / 2, y: -calloutView.bounds.size.height*0.52)

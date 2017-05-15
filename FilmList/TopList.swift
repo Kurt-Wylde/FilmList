@@ -13,21 +13,13 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
         //This is a url to JSON (a bit modified json from the myapifilms.com. It's static. The live top250 json from myapifilms.com is hard to deploy in the app)
         final let urlString = "https://api.myjson.com/bins/128p7x"
-        //"https://api.myjson.com/bins/pvitx"
-        //Old url "http://api.myapifilms.com/imdb/top?start=1&end=10&token=67fc7a85-30c9-4031-a604-f126d958e077&format=json&data=0"
         
         @IBOutlet weak var tableView: UITableView!
         
         var titleArray = [String]()
         var yearArray = [String]()
         var imgURLArray = [String]()
-    
         var ReleaseArray = [String]()
-        var DirectorsArray = [String]()
-        var WritersArray = [String]()
-        var CountriesArray = [String]()
-        var LanguagesArray = [String]()
-        var GenresArray = [String]()
         var PlotArray = [String]()
         var urlIMDBArray = [String]()
         var RatingArray = [String]()
@@ -39,20 +31,19 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            
             self.title = "Top movies"
             self.navigationController?.navigationBar.titleTextAttributes? = [NSForegroundColorAttributeName: UIColor.white]
             
-            self.downloadJsonWithTask()
-            
-            
+            self.downloadJsonWithTask() //Calling function to start
         }
     
         
             func downloadJsonWithTask() {
         
                 let url = NSURL(string: urlString)
-        
+                if Reachability.isConnectedToNetwork() == true
+                {
+                    print("Internet Connection Available!")
                 var downloadTask = URLRequest(url: (url as URL?)!, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 60)
         
                 downloadTask.httpMethod = "GET"
@@ -123,7 +114,15 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
                     
         
                 }).resume()
-            }
+                }    else {
+                    print("Internet Connection not Available!")
+                    let alert = UIAlertController(title: "Warning",
+                                                  message: "No internet connection",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                    present(alert, animated: true)
+                }}
+
     
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return titleArray.count
