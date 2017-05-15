@@ -53,7 +53,7 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
         
                 let url = NSURL(string: urlString)
         
-                var downloadTask = URLRequest(url: (url as? URL)!, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 60)
+                var downloadTask = URLRequest(url: (url as URL?)!, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 60)
         
                 downloadTask.httpMethod = "GET"
         
