@@ -182,21 +182,22 @@ class tableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let indexPathForRow = NSIndexPath(row: index, section: 0)
         tableView.deleteRows(at: [indexPathForRow as IndexPath], with: .fade)
         tableView.endUpdates()
+        
     }
     // MARK: - Table view delegate
-    
+    //Setting color for cells
     func colorForIndex(index: Int) -> UIColor {
         let itemCount = filmItems.count - 1
         let val = (CGFloat(index) / CGFloat(itemCount)) * 0.6
         return UIColor(red: 1.0, green: val, blue: 0.0, alpha: 1.0)
     }
-    
+    //Cell Height
     let kRowHeight: CGFloat = 50.0
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
         return kRowHeight
     }
-    
+    //Coloring cells
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
                    forRowAt indexPath: IndexPath) {
         cell.backgroundColor = colorForIndex(index: indexPath.row)
@@ -373,7 +374,8 @@ class tableViewController: UIViewController, UITableViewDataSource, UITableViewD
                 "Release to add item" : "Pull to add item"
             placeHolderCell.alpha = min(1.0, -scrollViewContentOffsetY / tableView.rowHeight)
         } else {
-            pullDownInProgress = false
+            pullDownInProgress = scrollViewContentOffsetY <= 0.0 ?
+                true : false
         }
     }
     
