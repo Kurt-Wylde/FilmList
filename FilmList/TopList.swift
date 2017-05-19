@@ -68,21 +68,6 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
                                     if let name = FilmsDict.value(forKey: "releaseDate") {
                                         self.ReleaseArray.append(name as! String)
                                     }
-//                                    if let name = FilmsDict.value(forKey: "directors") {
-//                                        self.DirectorsArray.append(name as! String)
-//                                    }
-//                                    if let name = FilmsDict.value(forKey: "writers") {
-//                                        self.WritersArray.append(name as! String)
-//                                    }
-//                                    if let name = FilmsDict.value(forKey: "countries") {
-//                                        self.CountriesArray.append(name as! String)
-//                                    }
-//                                    if let name = FilmsDict.value(forKey: "languages") {
-//                                        self.LanguagesArray.append(name as! String)
-//                                    }
-//                                    if let name = FilmsDict.value(forKey: "genres") {
-//                                        self.GenresArray.append(name as! String)
-//                                    }
                                     if let name = FilmsDict.value(forKey: "plot") {
                                         self.PlotArray.append(name as! String)
                                     }
