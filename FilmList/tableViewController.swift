@@ -220,7 +220,7 @@ class tableViewController: UIViewController, UITableViewDataSource, UITableViewD
     // indicates that the pinch is in progress
     var pinchInProgress = false
     
-    func handlePinch(recognizer: UIPinchGestureRecognizer) {
+    @objc func handlePinch(recognizer: UIPinchGestureRecognizer) {
         if recognizer.state == .began {
             pinchStarted(recognizer: recognizer)
         }

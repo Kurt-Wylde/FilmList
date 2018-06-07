@@ -40,7 +40,7 @@ class DetailViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = true
     }
-    func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = false
         sender.view?.removeFromSuperview()

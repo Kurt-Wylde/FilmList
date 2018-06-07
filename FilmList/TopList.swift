@@ -32,7 +32,7 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
             super.viewDidLoad()
             
             self.title = "Top movies"
-            self.navigationController?.navigationBar.titleTextAttributes? = [NSForegroundColorAttributeName: UIColor.white]
+            self.navigationController?.navigationBar.titleTextAttributes? = [NSAttributedStringKey.foregroundColor: UIColor.white]
             
             self.downloadJsonWithTask() //Calling function to start
         }

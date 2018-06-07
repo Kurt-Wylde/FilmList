@@ -116,7 +116,7 @@ class FilmViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     //MARK: - horizontal pan gesture methods
-    func handlePan(recognizer: UIPanGestureRecognizer) {
+    @objc func handlePan(recognizer: UIPanGestureRecognizer) {
         // 1
         if recognizer.state == .began {
             // when the gesture begins, record the current center location
