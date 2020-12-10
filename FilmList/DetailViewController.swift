@@ -1,10 +1,3 @@
-//
-//  DataViewController.swift
-//  FilmList
-//
-//  Created by Kurt on 02.05.17.
-//  Copyright © 2017 Evgeny Koshkin. All rights reserved.
-//
 
 import UIKit
 
@@ -68,7 +61,7 @@ class DetailViewController: UIViewController {
         releaseDateString.insert(".", at: releaseDateString.index(releaseDateString.startIndex, offsetBy: +4))
         releaseDateString.insert(".", at: releaseDateString.index(releaseDateString.startIndex, offsetBy: +7))
         self.releaseDateLabel.text = "Released: \(releaseDateString!)"
-        self.urlIMDBLabel.setTitle("IMDB Link", for: UIControlState.normal)
+        self.urlIMDBLabel.setTitle("IMDB Link", for: UIControl.State.normal)
         self.ratingLabel.text = "Rating: \(ratingString!)"
         self.ratedLabel.text = "Rated: \(ratedString!)"
         self.votesLabel.text = "Votes: \(votesString!)"
@@ -78,7 +71,7 @@ class DetailViewController: UIViewController {
         let imgURL = URL(string:imageString)
         
         let data = NSData(contentsOf: (imgURL)!)
-        self.imageView.image = UIImage(data: data as! Data)
+        self.imageView.image = UIImage(data: data! as Data)
         
 
     }

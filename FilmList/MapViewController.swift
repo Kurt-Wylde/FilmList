@@ -1,10 +1,3 @@
-//
-//  MapViewController.swift
-//  FilmList
-//
-//  Created by Kurt on 02.04.17.
-//  Copyright © 2017 Evgeny Koshkin. All rights reserved.
-//
 
 import UIKit
 import MapKit
@@ -34,7 +27,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.delegate = self
         
         let MapCenter = CLLocationCoordinate2DMake(49.85096864,24.03086744)
-        let region = MKCoordinateRegionMakeWithDistance(MapCenter, regionRadius * 2, regionRadius * 2)
+        let region = MKCoordinateRegion.init(center: MapCenter, latitudinalMeters: regionRadius * 2, longitudinalMeters: regionRadius * 2)
         Map.setRegion(region, animated: true)
         
         // 1

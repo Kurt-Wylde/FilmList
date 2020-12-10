@@ -1,10 +1,3 @@
-//
-//  FilmList.swift
-//  FilmList
-//
-//  Created by Kurt on 19.03.17.
-//  Copyright © 2017 Evgeny Koshkin. All rights reserved.
-//
 
 import Foundation
 

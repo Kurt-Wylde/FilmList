@@ -1,10 +1,3 @@
-//
-//  CircleButton.swift
-//  InMarket
-//
-//  Created by Kurt on 01.06.16.
-//  Copyright © 2016 Evgeny Koshkin. All rights reserved.
-//
 
 import Foundation
 import UIKit

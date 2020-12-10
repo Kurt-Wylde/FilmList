@@ -1,12 +1,3 @@
-//
-//  StrikeThroughText.swift
-//  FilmList
-//
-//  Created by Kurt on 08.05.17.
-//  Copyright © 2017 Evgeny Koshkin. All rights reserved.
-//
-
-
 import UIKit
 import QuartzCore
 
@@ -44,7 +35,7 @@ class StrikeThroughText: UITextField {
     
     let kStrikeOutThickness: CGFloat = 2.0
     func resizeStrikeThrough() {
-        let textSize = text!.size(attributes: [NSFontAttributeName:font!])
+        let textSize = text!.size(withAttributes: [NSAttributedString.Key.font:font!])
         strikeThroughLayer.frame = CGRect(x: 0, y: bounds.size.height/2,
                                           width: textSize.width, height: kStrikeOutThickness)
     }

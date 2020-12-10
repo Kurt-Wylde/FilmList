@@ -1,10 +1,3 @@
-//
-//  TopList.swift
-//  FilmList
-//
-//  Created by Kurt on 16.04.17.
-//  Copyright © 2017 Evgeny Koshkin. All rights reserved.
-//
 
 import UIKit
 import Foundation
@@ -41,7 +34,7 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
             
             
             self.title = "Top movies"
-            self.navigationController?.navigationBar.titleTextAttributes? = [NSForegroundColorAttributeName: UIColor.white]
+            self.navigationController?.navigationBar.titleTextAttributes? = [NSAttributedString.Key.foregroundColor: UIColor.white]
             
             self.downloadJsonWithTask()
             
@@ -53,13 +46,13 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
         
                 let url = NSURL(string: urlString)
         
-                var downloadTask = URLRequest(url: (url as? URL)!, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 60)
+                var downloadTask = URLRequest(url: (url as URL?)!, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 60)
         
                 downloadTask.httpMethod = "GET"
         
                 URLSession.shared.dataTask(with: downloadTask, completionHandler: {(data, response, error) -> Void in
         
-                    if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                    if let jsonData = ((try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary) as NSDictionary??) {
                         print(jsonData!.value(forKey: "movies")!)
                         
                         if let FilmsArray = jsonData!.value(forKey: "movies") as? NSArray {
@@ -137,8 +130,8 @@ class TopList: UIViewController,UITableViewDataSource,UITableViewDelegate {
             let imgURL = NSURL(string: imgURLArray[indexPath.row])
             
             if imgURL != nil {
-                let data = NSData(contentsOf: (imgURL as? URL)!)
-                cell.imgView.image = UIImage(data: data as! Data)
+                let data = NSData(contentsOf: (imgURL as URL?)!)
+                cell.imgView.image = UIImage(data: data! as Data)
             }
             
             return cell

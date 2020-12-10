@@ -1,0 +1,84 @@
+
+/* Class = "UILabel"; text = "Release"; ObjectID = "1fX-yi-S9v"; */
+"1fX-yi-S9v.text" = "Release";
+
+/* Class = "UINavigationItem"; title = "Top movies"; ObjectID = "48N-rf-q4Y"; */
+"48N-rf-q4Y.title" = "Top movies";
+
+/* Class = "UITabBarItem"; title = "List"; ObjectID = "5My-75-pW9"; */
+"5My-75-pW9.title" = "List";
+
+/* Class = "UITableViewController"; title = "Film List"; ObjectID = "6Rh-Ta-orH"; */
+"6Rh-Ta-orH.title" = "Film List";
+
+/* Class = "UITabBarItem"; title = "Watched"; ObjectID = "B8i-rB-Cjp"; */
+"B8i-rB-Cjp.title" = "Watched";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "E2E-cR-SNP"; */
+"E2E-cR-SNP.normalTitle" = "+";
+
+/* Class = "UINavigationItem"; title = "Watched movies"; ObjectID = "Em7-Tz-qob"; */
+"Em7-Tz-qob.title" = "Watched movies";
+
+/* Class = "UITabBarItem"; title = "Top"; ObjectID = "FB9-gk-NAj"; */
+"FB9-gk-NAj.title" = "Top";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "FD9-JU-n6E"; */
+"FD9-JU-n6E.text" = "Type";
+
+/* Class = "UIButton"; normalTitle = "Satellite"; ObjectID = "GSi-aQ-P1v"; */
+"GSi-aQ-P1v.normalTitle" = "Satellite";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Q8a-oj-aXd"; */
+"Q8a-oj-aXd.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "RAk-rD-RqO"; */
+"RAk-rD-RqO.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Top"; ObjectID = "S5o-aA-7l9"; */
+"S5o-aA-7l9.title" = "Top";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "U5M-ea-kqj"; */
+"U5M-ea-kqj.title" = "Map";
+
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "WlO-FB-RjK"; */
+"WlO-FB-RjK.normalTitle" = "Map";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "ZnV-ds-4Mb"; */
+"ZnV-ds-4Mb.normalTitle" = "-";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "bdM-VF-JNq"; */
+"bdM-VF-JNq.text" = "Rating";
+
+/* Class = "UILabel"; text = "Votes"; ObjectID = "czC-8h-H6L"; */
+"czC-8h-H6L.text" = "Votes";
+
+/* Class = "UILabel"; text = "Year"; ObjectID = "dhk-D6-ZLS"; */
+"dhk-D6-ZLS.text" = "Year";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "fCT-zo-Vjj"; */
+"fCT-zo-Vjj.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Rated"; ObjectID = "fuM-o3-xME"; */
+"fuM-o3-xME.text" = "Rated";
+
+/* Class = "UILabel"; text = "Year:"; ObjectID = "fyG-tf-ne2"; */
+"fyG-tf-ne2.text" = "Year:";
+
+/* Class = "UITabBarItem"; title = "Films"; ObjectID = "jrG-Ym-7CW"; */
+"jrG-Ym-7CW.title" = "Films";
+
+/* Class = "UIButton"; normalTitle = "IMDB"; ObjectID = "p6p-CQ-ItI"; */
+"p6p-CQ-ItI.normalTitle" = "IMDB";
+
+/* Class = "UILabel"; text = "Title:"; ObjectID = "pkC-4M-arQ"; */
+"pkC-4M-arQ.text" = "Title:";
+
+/* Class = "UITabBarItem"; title = "Watched"; ObjectID = "thZ-wz-IMU"; */
+"thZ-wz-IMU.title" = "Watched";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uHT-ZI-GNb"; */
+"uHT-ZI-GNb.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Film List"; ObjectID = "ycB-1E-lvb"; */
+"ycB-1E-lvb.title" = "Film List";

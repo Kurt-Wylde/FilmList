@@ -1,10 +1,3 @@
-//
-//  TableViewCell.swift
-//  ClearStyle
-//
-//  Created by Audrey M Tam on 29/07/2014.
-//  Copyright (c) 2014 Ray Wenderlich. All rights reserved.
-//
 
 import UIKit
 import QuartzCore
@@ -42,7 +35,7 @@ class FilmViewCell: UITableViewCell, UITextFieldDelegate {
         fatalError("NSCoding not supported")
     }
     
-    override init(style: UITableViewCellStyle,
+    override init(style: UITableViewCell.CellStyle,
                   reuseIdentifier: String?) {
         // create a label that renders the to-do item text
         label = StrikeThroughText(frame: CGRect.null)
@@ -116,7 +109,7 @@ class FilmViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     //MARK: - horizontal pan gesture methods
-    func handlePan(recognizer: UIPanGestureRecognizer) {
+    @objc func handlePan(recognizer: UIPanGestureRecognizer) {
         // 1
         if recognizer.state == .began {
             // when the gesture begins, record the current center location
@@ -130,7 +123,7 @@ class FilmViewCell: UITableViewCell, UITextFieldDelegate {
             deleteOnDragRelease = frame.origin.x < -frame.size.width / 2.0
             completeOnDragRelease = frame.origin.x > frame.size.width / 2.0
             // fade the contextual clues
-            let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 2.0)
+            let cueAlpha = abs(frame.origin.x) / (frame.size.width / 2.0)
             tickLabel.alpha = cueAlpha
             crossLabel.alpha = cueAlpha
             // indicate when the user has pulled the item far enough to invoke the given action
@@ -162,7 +155,7 @@ class FilmViewCell: UITableViewCell, UITextFieldDelegate {
     override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if let panGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer {
             let translation = panGestureRecognizer.translation(in: superview!)
-            if fabs(translation.x) > fabs(translation.y) {
+            if abs(translation.x) > abs(translation.y) {
                 return true
             }
             return false
